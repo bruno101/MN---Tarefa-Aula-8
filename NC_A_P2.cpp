@@ -58,7 +58,11 @@ double NC_A_P2::integrar () {
 
       } else {
 
-        if ( abs( (integral-oldIntegral)/integral ) < precisao) {
+        if (integral == 0) {
+          if (abs(integral-oldIntegral) < precisao) {
+            break;
+          }
+        } else if ( abs( (integral-oldIntegral)/integral ) < precisao) {
           break;
         }
 
