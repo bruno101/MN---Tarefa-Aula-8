@@ -60,9 +60,11 @@ double NC_A_P3::integrar () {
 
         if (integral == 0) {
           if (abs(integral-oldIntegral) < precisao) {
+            std::cout << "O número de partições usado foi N = " << n << "\n";
             break;
           }
         } else if ( abs( (integral-oldIntegral)/integral ) < precisao) {
+          std::cout << "O número de partições usado foi N = " << n << "\n";
           break;
         }
 
